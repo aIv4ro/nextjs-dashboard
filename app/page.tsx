@@ -1,7 +1,8 @@
-import AcmeLogo from '@/app/ui/acme-logo';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import AcmeLogo from '@/app/ui/acme-logo'
+import Link from 'next/link'
 
-import Link from 'next/link';
-export default function Page() {
+export default function Page () {
   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
@@ -9,7 +10,7 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
+          <p className={'text-xl text-gray-800 md:text-3xl md:leading-normal'}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
@@ -28,5 +29,5 @@ export default function Page() {
         </div>
       </div>
     </main>
-  );
+  )
 }

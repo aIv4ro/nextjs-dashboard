@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { CustomerField } from '@/app/lib/definitions';
-import Link from 'next/link';
+import { type CustomerField } from '@/app/lib/definitions'
+import Link from 'next/link'
 import {
   CheckIcon,
   ClockIcon,
   CurrencyDollarIcon,
-  UserCircleIcon,
-} from '@heroicons/react/24/outline';
-import { Button } from '../button';
+  UserCircleIcon
+} from '@heroicons/react/24/outline'
+import { Button } from '../button'
 
-export default function Form({ customers }: { customers: CustomerField[] }) {
+export default function Form ({ customers }: { customers: CustomerField[] }) {
   return (
     <form>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
@@ -111,5 +111,5 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
         <Button type="submit">Create Invoice</Button>
       </div>
     </form>
-  );
+  )
 }

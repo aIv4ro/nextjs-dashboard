@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import NavLinks from '@/app/ui/dashboard/nav-links';
-import AcmeLogo from '@/app/ui/acme-logo';
-import { PowerIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link'
+import NavLinks from '@/app/ui/dashboard/nav-links'
+import AcmeLogo from '@/app/ui/acme-logo'
+import { PowerIcon } from '@heroicons/react/24/outline'
 
-export default function SideNav() {
+export default function SideNav () {
   return (
     <div className="flex h-full flex-col px-3 py-4 md:px-2">
       <Link
@@ -25,5 +25,5 @@ export default function SideNav() {
         </form>
       </div>
     </div>
-  );
+  )
 }
