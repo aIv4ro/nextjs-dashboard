@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ArrowPathIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { lusitana } from '@/app/ui/fonts'
 import { type LatestInvoice } from '@/app/lib/definitions'
+
 export default async function LatestInvoices ({
   latestInvoices
 }: {
@@ -17,7 +17,7 @@ export default async function LatestInvoices ({
       <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
         {/* NOTE: comment in this code when you get to this point in the course */}
 
-        {/* <div className="bg-white px-6">
+        <div className="bg-white px-6">
           {latestInvoices.map((invoice, i) => {
             return (
               <div
@@ -25,12 +25,13 @@ export default async function LatestInvoices ({
                 className={clsx(
                   'flex flex-row items-center justify-between py-4',
                   {
-                    'border-t': i !== 0,
-                  },
+                    'border-t': i !== 0
+                  }
                 )}
               >
                 <div className="flex items-center">
                   <Image
+                    alt={invoice.name}
                     src={invoice.image_url}
                     className="mr-4 rounded-full"
                     width={32}
@@ -51,9 +52,9 @@ export default async function LatestInvoices ({
                   {invoice.amount}
                 </p>
               </div>
-            );
+            )
           })}
-        </div> */}
+        </div>
         <div className="flex items-center pb-2 pt-6">
           <ArrowPathIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>

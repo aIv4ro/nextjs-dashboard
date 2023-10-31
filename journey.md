@@ -5,7 +5,7 @@
 4. [Creating Layouts and Pages](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages) ✔
 5. [Navigating Between Pages](https://nextjs.org/learn/dashboard-app/navigating-between-pages) ✔
 6. [Setting Up Your Database](https://nextjs.org/learn/dashboard-app/setting-up-your-database) ✔
-7. [Fetching Data](https://nextjs.org/learn/dashboard-app/fetching-data)
+7. [Fetching Data](https://nextjs.org/learn/dashboard-app/fetching-data) ✔
 8. [Static and Dynamic Rendering](https://nextjs.org/learn/dashboard-app/static-and-dynamic-rendering)
 9. [Streaming](https://nextjs.org/learn/dashboard-app/streaming)
 10. [Partial Prerendering (Optional)](https://nextjs.org/learn/dashboard-app/partial-prerendering)
