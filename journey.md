@@ -8,7 +8,7 @@
 7. [Fetching Data](https://nextjs.org/learn/dashboard-app/fetching-data) ✔
 8. [Static and Dynamic Rendering](https://nextjs.org/learn/dashboard-app/static-and-dynamic-rendering) ✔
 9. [Streaming](https://nextjs.org/learn/dashboard-app/streaming) ✔
-10. [Partial Prerendering (Optional)](https://nextjs.org/learn/dashboard-app/partial-prerendering)
+10. [Partial Prerendering (Optional)](https://nextjs.org/learn/dashboard-app/partial-prerendering) ✔
 11. [Adding Search and Pagination](https://nextjs.org/learn/dashboard-app/adding-search-and-pagination)
 12. [Mutating Data](https://nextjs.org/learn/dashboard-app/mutating-data)
 13. [Handling Errors](https://nextjs.org/learn/dashboard-app/error-handling)
