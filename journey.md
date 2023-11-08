@@ -10,7 +10,7 @@
 9. [Streaming](https://nextjs.org/learn/dashboard-app/streaming) ✔
 10. [Partial Prerendering (Optional)](https://nextjs.org/learn/dashboard-app/partial-prerendering) ✔
 11. [Adding Search and Pagination](https://nextjs.org/learn/dashboard-app/adding-search-and-pagination) ✔
-12. [Mutating Data](https://nextjs.org/learn/dashboard-app/mutating-data)
+12. [Mutating Data](https://nextjs.org/learn/dashboard-app/mutating-data) ✔
 13. [Handling Errors](https://nextjs.org/learn/dashboard-app/error-handling)
 14. [Improving Accessibility](https://nextjs.org/learn/dashboard-app/improving-accessibility)
 15. [Adding Authentication](https://nextjs.org/learn/dashboard-app/adding-authentication)

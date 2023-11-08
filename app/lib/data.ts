@@ -8,7 +8,8 @@ import {
   type InvoicesTable,
   type LatestInvoiceRaw,
   type User,
-  type Revenue
+  type Revenue,
+  type Invoice
 } from './definitions'
 import { formatCurrency } from './utils'
 
@@ -240,4 +241,35 @@ export async function getUser (email: string) {
     console.error('Failed to fetch user:', error)
     throw new Error('Failed to fetch user.')
   }
+}
+
+export async function insertInvoice ({
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  customer_id,
+  amount,
+  status,
+  date
+}: Omit<Invoice, 'id'>) {
+  await sql`
+    INSERT INTO invoices (customer_id, amount, status, date)
+    VALUES (${customer_id}, ${amount}, ${status}, ${date})
+  `
+}
+
+export async function updateInvoice ({
+  id,
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  customer_id,
+  amount,
+  status
+}: Omit<Invoice, 'date'>) {
+  await sql`
+    UPDATE invoices
+    SET customer_id = ${customer_id}, amount = ${amount}, status = ${status}
+    WHERE id = ${id}
+  `
+}
+
+export async function deleteInvoice (id: string) {
+  await sql`DELETE FROM invoices WHERE id = ${id}`
 }
