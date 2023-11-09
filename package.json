@@ -5,7 +5,7 @@
     "dev": "next dev",
     "start": "next start",
     "seed": "node -r dotenv/config ./scripts/seed.mjs",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -28,6 +28,7 @@
     "autoprefixer": "10.4.15",
     "dotenv": "^16.3.1",
     "eslint": "^8.0.1",
+    "eslint-config-next": "^14.0.2",
     "eslint-config-standard-with-typescript": "^39.1.1",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",

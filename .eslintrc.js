@@ -5,6 +5,7 @@ module.exports = {
     node: true
   },
   extends: [
+    'next/core-web-vitals',
     'standard-with-typescript',
     'plugin:react/recommended'
   ],
