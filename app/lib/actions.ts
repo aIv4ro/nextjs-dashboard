@@ -16,7 +16,7 @@ const InvoiceSchema = z.object({
 const CreateInvoice = InvoiceSchema.omit({ id: true, date: true })
 const UpdateInvoice = InvoiceSchema.omit({ date: true })
 
-export async function createInvoice (formData: FormData): Promise<void> {
+export async function createInvoice (formData: FormData) {
   const {
     // eslint-disable-next-line @typescript-eslint/naming-convention
     customerId: customer_id,
@@ -29,14 +29,20 @@ export async function createInvoice (formData: FormData): Promise<void> {
   })
   const amountInCents = amount * 100
   const date = new Date().toISOString().split('T')[0]
-  await insertInvoice({
-    customer_id,
-    amount: amountInCents,
-    status,
-    date
-  })
-  revalidatePath('/dashboard/invoices')
-  redirect('/dashboard/invoices')
+  try {
+    await insertInvoice({
+      customer_id,
+      amount: amountInCents,
+      status,
+      date
+    })
+    revalidatePath('/dashboard/invoices')
+    redirect('/dashboard/invoices')
+  } catch (error) {
+    return {
+      message: 'Database Error: Failed to Create Invoice.'
+    }
+  }
 }
 
 export async function updateInvoice (id: string, formData: FormData) {
@@ -54,18 +60,25 @@ export async function updateInvoice (id: string, formData: FormData) {
 
   const amountInCents = amount * 100
 
-  await updateDbInvoice({
-    id,
-    customer_id,
-    amount: amountInCents,
-    status
-  })
-
-  revalidatePath('/dashboard/invoices')
-  redirect('/dashboard/invoices')
+  try {
+    await updateDbInvoice({
+      id,
+      customer_id,
+      amount: amountInCents,
+      status
+    })
+    revalidatePath('/dashboard/invoices')
+    redirect('/dashboard/invoices')
+  } catch (error) {
+    return { message: 'Database Error: Failed to Update Invoice.' }
+  }
 }
 
 export async function deleteInvoice (id: string) {
-  await deleteDbInvoice(id)
-  revalidatePath('/dashboard/invoices')
+  try {
+    await deleteDbInvoice(id)
+    revalidatePath('/dashboard/invoices')
+  } catch (error) {
+    return { message: 'Database Error: Failed to Delete Invoice.' }
+  }
 }
