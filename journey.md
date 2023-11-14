@@ -13,5 +13,5 @@
 12. [Mutating Data](https://nextjs.org/learn/dashboard-app/mutating-data) ✔
 13. [Handling Errors](https://nextjs.org/learn/dashboard-app/error-handling) ✔
 14. [Improving Accessibility](https://nextjs.org/learn/dashboard-app/improving-accessibility) ✔
-15. [Adding Authentication](https://nextjs.org/learn/dashboard-app/adding-authentication)
+15. [Adding Authentication](https://nextjs.org/learn/dashboard-app/adding-authentication) ✔
 16. [Adding Metadata](https://nextjs.org/learn/dashboard-app/adding-metadata)

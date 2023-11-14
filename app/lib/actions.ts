@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { insertInvoice, updateInvoice as updateDbInvoice, deleteInvoice as deleteDbInvoice } from './data'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
+import { signIn, signOut } from '@/auth'
 
 // This is temporary until @types/react-dom is updated
 export interface State {
@@ -113,4 +114,22 @@ export async function deleteInvoice (id: string) {
   } catch (error) {
     return { message: 'Database Error: Failed to Delete Invoice.' }
   }
+}
+
+export async function authenticate (
+  prevState: string | undefined,
+  formData: FormData
+) {
+  try {
+    await signIn('credentials', Object.fromEntries(formData))
+  } catch (error) {
+    if ((error as Error).message.includes('CredentialsSignin')) {
+      return 'CredentialSignin'
+    }
+    throw error
+  }
+}
+
+export async function signOutAction () {
+  await signOut()
 }
